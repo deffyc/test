@@ -1,0 +1,35 @@
+services:
+  # A Docker web service https://github.com/deffyc/test
+  - type: web
+    name: alist
+    env: docker
+    repo: https://github.com/deffyc/test.git # optional
+    region: oregon # optional (defaults to oregon)
+    plan: free # optional (defaults to starter)
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 5244
+      - key: DB_TYPE
+
+        sync: false
+      - key: DB_HOST
+
+        sync: false
+      - key: DB_PORT
+
+        sync: false
+      - key: DB_USER
+
+        sync: false
+      - key: DB_PASS
+
+        sync: false
+      - key: DB_NAME
+
+        sync: false
+      - key: DB_TABLE_PREFIX
+        value: alist_
+        sync: false
+      - key: CDN
+        sync: false
